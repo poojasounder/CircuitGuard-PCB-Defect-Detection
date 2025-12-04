@@ -1,12 +1,17 @@
 ## CircuitGuard: PCB Defect Detection and Classification
-🌟 Project Statement
+### 🌟 Project Statement
+
 The objective of the CircuitGuard project is to develop a fully automated system for defect detection and classification on Printed Circuit Boards (PCBs) using computer vision and deep learning techniques. The system will leverage reference-based image subtraction to localize defects and a deep Convolutional Neural Network (CNN) (EfficientNet-B4) for robust classification of the defect type.
 The final deliverable is a functional web application that allows users to upload test and template PCB images and receive annotated results in real-time.
-⚙️ Core Pipeline Overview
+
+### ⚙️ Core Pipeline Overview
+
 The system operates in a three-stage pipeline:
+
 Subtraction Stage: Detects potential defect regions by comparing a test PCB image against a defect-free template.
 Extraction Stage: Isolates individual defect areas using contour detection to create Regions of Interest (ROIs).
 Classification Stage: Predicts the type of defect (e.g., Short, Open, Missing Hole) using a trained CNN.
+
 🛠️ Tech Stack
 
 
