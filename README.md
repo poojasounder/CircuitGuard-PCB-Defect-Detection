@@ -8,9 +8,10 @@ The final deliverable is a functional web application that allows users to uploa
 
 The system operates in a three-stage pipeline:
 
-Subtraction Stage: Detects potential defect regions by comparing a test PCB image against a defect-free template.
-Extraction Stage: Isolates individual defect areas using contour detection to create Regions of Interest (ROIs).
-Classification Stage: Predicts the type of defect (e.g., Short, Open, Missing Hole) using a trained CNN.
+- **Subtraction Stage:** Detects potential defect regions by comparing a test PCB image against a defect-free template.
+- **Extraction Stage:** Isolates individual defect areas using contour detection to create Regions of Interest (ROIs).
+- **Classification Stage:** Predicts the type of defect (e.g., Short, Open, Missing Hole) using a trained CNN.
+
 
 🛠️ Tech Stack
 
