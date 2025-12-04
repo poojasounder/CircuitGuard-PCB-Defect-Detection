@@ -23,7 +23,8 @@ The system operates in a three-stage pipeline:
 | **Deployment**       | Streamlit / Python     | Frontend UI and modularized backend inference pipeline.               |
 
 
-📁 Project Structure
+### 📁 Project Structure
+
 CircuitGuard-PCB-Defect-Detection/
 ├── README.md               <-- This file
 ├── requirements.txt        <-- Python dependencies
@@ -37,6 +38,7 @@ CircuitGuard-PCB-Defect-Detection/
 │   ├── M2_model_training/  <-- PyTorch scripts for EfficientNet (WIP)
 │   └── web_app/            <-- Frontend and backend integration (WIP)
 └── models/                 <-- Trained model checkpoints (WIP)
+
 
 
 📈 Project Progress
