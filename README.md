@@ -47,9 +47,10 @@ CircuitGuard-PCB-Defect-Detection/
 
 
 
-📈 Project Progress
-Milestone 1: Image Processing (Complete)
+### 📈 Project Progress
+#### Milestone 1: Image Processing (Complete)
 Objective: Successfully generate a dataset of labeled defect Regions of Interest (ROIs) by localizing differences between template and test PCB images.
+
 Module 1: Image Subtraction and Mask Generation
 Task
 Rationale / Technical Thinking
