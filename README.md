@@ -53,8 +53,6 @@ Objective: Successfully generate a dataset of labeled defect Regions of Interest
 
 #### Module 1: Image Subtraction and Mask Generation
 
-## 🧠 Rationale / Technical Thinking
-
 | **Task**               | **Rationale / Technical Thinking** |
 |------------------------|-------------------------------------|
 | **Image Alignment**    | The DeepPCB dataset provides mostly pre-aligned pairs. However, for real-world robustness, conversion to grayscale and a subsequent check for alignment (e.g., phase correlation or feature matching) is a necessary preprocessing step. |
@@ -63,7 +61,12 @@ Objective: Successfully generate a dataset of labeled defect Regions of Interest
 
 
 #### Module 2: Contour Detection and ROI Extraction
-
+| **Task**               | **Rationale / Technical Thinking** |
+|------------------------|-------------------------------------|
+| **Morphological Operations**    | The binary mask is noisy. We apply a Closing Operation (`cv2.MORPH_CLOSE`), which is a combination of Dilation followed by Erosion. This operation helps to: 1. Fill small holes within genuine defect regions, and 2. Smooth the boundaries, resulting in more accurate bounding boxes. |
+| **Contour Extraction** | `cv2.findContours` is used on the cleaned binary mask to identify the precise boundaries of each defect blob. This is more accurate than simply looking for pixel groups, as it provides geometric structure. |
+| **Bounding Box & Cropping** | For each detected contour, `cv2.boundingRect` is used to define the minimal encompassing rectangle. This box is then used to crop the defect region from the original Test Image. Cropping the original image (not the mask) ensures the CNN receives all necessary color and texture information for accurate classification. |
+| **ROI Standardization** | All extracted ROIs are resized to 128x128 pixels. This standardization is mandatory because CNNs like EfficientNet require fixed-size input tensors for batch processing.|
 
 ### ➡️ Next Steps
 The next focus is Milestone 2: Model Training and Evaluation. 
