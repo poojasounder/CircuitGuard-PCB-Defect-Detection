@@ -43,7 +43,7 @@ CircuitGuard-PCB-Defect-Detection/
 └── models/                   <-- Trained model checkpoints (WIP)
 </pre>
 
-</div>          <-- Trained model checkpoints (WIP)
+</div>       
 
 
 
