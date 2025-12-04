@@ -25,19 +25,25 @@ The system operates in a three-stage pipeline:
 
 ### 📁 Project Structure
 
+<div style="background:#eef1f7; padding:20px; border-radius:12px;">
+
+<pre>
 CircuitGuard-PCB-Defect-Detection/
-├── README.md               <-- This file
-├── requirements.txt        <-- Python dependencies
+├── README.md                 <-- This file
+├── requirements.txt          <-- Python dependencies
 ├── data/
-│   ├── raw/                <-- Downloaded DeepPCB image pairs (Template/Test)
-│   └── processed/          <-- Labeled 128x128 defect ROI images (Output of M1)
+│   ├── raw/                  <-- Downloaded DeepPCB image pairs (Template/Test)
+│   └── processed/            <-- Labeled 128x128 defect ROI images (Output of M1)
 ├── src/
 │   ├── M1_image_processing/
-│   │   ├── subtraction.py  <-- Image subtraction and masking logic
+│   │   ├── subtraction.py    <-- Image subtraction and masking logic
 │   │   └── roi_extraction.py <-- Contour detection and cropping logic
-│   ├── M2_model_training/  <-- PyTorch scripts for EfficientNet (WIP)
-│   └── web_app/            <-- Frontend and backend integration (WIP)
-└── models/                 <-- Trained model checkpoints (WIP)
+│   ├── M2_model_training/    <-- PyTorch scripts for EfficientNet (WIP)
+│   └── web_app/              <-- Frontend and backend integration (WIP)
+└── models/                   <-- Trained model checkpoints (WIP)
+</pre>
+
+</div>          <-- Trained model checkpoints (WIP)
 
 
 
