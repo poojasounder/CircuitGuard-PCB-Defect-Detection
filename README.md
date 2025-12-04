@@ -13,24 +13,15 @@ The system operates in a three-stage pipeline:
 - **Classification Stage:** Predicts the type of defect (e.g., Short, Open, Missing Hole) using a trained CNN.
 
 
-🛠️ Tech Stack
+### 🛠️ Tech Stack
 
+| Area              | Tools / Libraries     | Purpose                                                              |
+|-------------------|------------------------|-----------------------------------------------------------------------|
+| **Image Processing** | OpenCV, NumPy          | Alignment, Subtraction, Thresholding, and ROI Extraction.             |
+| **Deep Learning**    | PyTorch, timm          | EfficientNet-B4 implementation, training, and inference.              |
+| **Dataset**          | DeepPCB                | Source data for training and evaluation.                              |
+| **Deployment**       | Streamlit / Python     | Frontend UI and modularized backend inference pipeline.               |
 
-Area
-Tools / Libraries
-Purpose
-Image Processing
-OpenCV, Numpy
-Alignment, Subtraction, Thresholding, and ROI Extraction.
-Deep Learning
-PyTorch, timm
-EfficientNet-B4 implementation, training, and inference.
-Dataset
-DeepPCB
-Source data for training and evaluation.
-Deployment
-Streamlit / Python
-Frontend UI and modularized backend inference pipeline.
 
 📁 Project Structure
 CircuitGuard-PCB-Defect-Detection/
